@@ -337,6 +337,7 @@ void initProfiling2 (void)
       debugBelch("Can't open profiling report file %s\n", 
 	      hp_filename);
       RtsFlags.ProfFlags.doHeapProfile = 0;
+      stgFree(prog);
       return;
     }
   }
